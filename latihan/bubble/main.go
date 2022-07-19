@@ -3,17 +3,20 @@ package main
 import "fmt"
 
 func bubbleSort(arr []int) {
-  len_array := len(arr)
-  for i := 0; i < len_array -1 ; i++ {
-    for j := 0; j < len_array - i -1 ; j++ {
+  iniArray := len(arr)
+
+  for i:= 0; i < iniArray -1; i++ {
+    for j := 0; j < iniArray -1 -i; j++ {
       if arr[j] > arr[j+1] {
-        arr[j] , arr[j+1] = arr[j+1], arr[j]
+        arr[j], arr[j+1] = arr[j+1] , arr[j]
       }
     }
   }
-  fmt.Println("after sort: " , arr)
+  fmt.Println("sesudah di sorting: " , arr)
 }
 
 func main() {
-  bubbleSort([]int{5,9,4,2,1})
+  contoh := []int{9,6,5,48,1}
+  fmt.Println("sebelum di sort: ", contoh)
+  bubbleSort(contoh)
 }
